@@ -1,0 +1,4 @@
+- Crear sistema bancario simulado para gestionar transacciones (giros, depositos y transferencias) entre las diferentes cuentas de usuarios
+creadas
+
+- Crear diferentes tipos de usuarios, para asi poder gestionar un(os) administrador(es) que cree y deshabilite cuentas de usuario
