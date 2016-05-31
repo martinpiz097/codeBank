@@ -2,3 +2,9 @@
 creadas
 
 - Crear diferentes tipos de usuarios, para asi poder gestionar un(os) administrador(es) que cree y deshabilite cuentas de usuario
+
+Integrantes:
+
+	Martín Pizarro Ascui
+	Emilio Garrote Alvear
+
