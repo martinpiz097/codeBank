@@ -34,8 +34,8 @@
                 break;//hola mundo2
             case 2:
                 echo "<a href="historial.php"><h2>Ver historial</h2></a>":
-                echo "<a href="transferencia.php"><h2>Realizar una transferencia</h2></a>";
-                echo "<a href="caja.php"><h2>Realizar un giro/deposito</h2></a>";
+                echo "<a href="formularioTransferencia.php"><h2>Realizar una transferencia</h2></a>";
+                echo "<a href="formulacioTransaccion.php"><h2>Realizar un giro/deposito</h2></a>";
 
                 //enviar datos usuario por post
                 break;
