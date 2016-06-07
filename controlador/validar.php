@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST["btnIniciar"])){ //isset: si existe una variable, se lee como "viene viajando "
+    if(isset($_POST["btnIniciar"])){
         require_once "../bd/Data.php";
 
         $rut=$_POST["txtRut"];
@@ -13,7 +13,6 @@
         $_SESSION["idPrivilegio"] = $idPrivilegio;
         $_SESSION["nombre"] = $nombre;
         $_SESSION["rut"]=$rut;
-        $_SESSION["pass"]=$pass;
 
         header("location: ../menu.php");
     }else{

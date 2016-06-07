@@ -7,6 +7,7 @@
     }else{
         $idPrivilegio=$_SESSION["idPrivilegio"];
         $nombre= $_SESSION["nombre"];
+        $rut=$_SESSION["rut"];
 
         if($idPrivilegio==0){
             session_destroy();
@@ -15,7 +16,6 @@
     }
 ?>
 
-<h2>Realizar un giro/deposito</h2>
 <html>
     <head>
         <meta charset="utf-8">
@@ -31,14 +31,21 @@
             case 1:
                 $d->formularioCrear("controlador/registrar.php");
                 $d->listarUsuarios();
-                break;//hola mundo2
+                break;
             case 2:
-                echo "<a href="historial.php"><h2>Ver historial</h2></a>":
+                echo "<a href="historial.php"><h2>Ver historial</h2></a>";
                 echo "<a href="formularioTransferencia.php"><h2>Realizar una transferencia</h2></a>";
                 echo "<a href="formulacioTransaccion.php"><h2>Realizar un giro/deposito</h2></a>";
-
-                //enviar datos usuario por post
                 break;
+        }
+
+        if(isset($_GET["m"])){
+                $m=$_GET["m"];
+                switch ($m) {
+                    case 6:
+                        echo "Debe hacer formulario realizar algun movimiento";
+                        break;
+                }
         }
         ?>
 

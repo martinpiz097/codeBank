@@ -4,15 +4,20 @@ if(isset($_POST["btnRealizarTransaccion"])){
 
     $idUsuario=$S_SESSION["idUsuario"];
     $monto=$S_POST["txtMonto"];
-    $cuenta=$S_POST["cboCuenta"];
+    //$cuenta=$S_POST["cboCuenta"];
     $tipo=$_POST["cboTipo"];
 
     $d = new Data();
     if($d->isOperacionValida($idUsuario, $monto);){
-        $d->addTransact($tipo, $idusuario, $cuenta, $monto);
-        header("location: /menu.php?m=5"); //transaccion exitosaa
+        if($tipo==1){
+            $d->addTransact($idusuario, -$monto);
+        }elseif($tipo==2){
+            $d->addTransact($idusuario, $monto);
+        }
+
+        header("location: ../formularioTransaccion.php?m=1"); //transaccion exitosaa
     }else{
-        header("location: /menu.php?m=6"); //transaccion fallida
+        header("location: ../formularioTransaccion.php?m=0"); //transaccion fallida
     }
 }
 

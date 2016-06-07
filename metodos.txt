@@ -1,0 +1,36 @@
+1. $d->isOperacionValida(int $idUsuario, int $monto);
+    tipo retorno: boolean;
+    uso: confirmar si existe monto suficiente en la cuenta.
+
+2. $d->addTransact(int $idusuario, int $monto);
+    tipo retorno: void;
+    uso: actualizar saldo sumando monto:
+        si monto es negativo, se restará del saldo
+        si monto es positivio, se sumara al saldo
+
+3. $d->addTransfer($idusuario, $destinatario, $monto);
+    tipo retorno:void;
+    uso: realizar una transferencia a un destinatario con un monto.
+        se actualizará saldo, restando monto.
+
+4. $d->existe($destinatario)
+    tipo retorno: boolean
+    uso: confirmar si existe usuario en la base de datos.
+
+5. $d->formularioCrear("controlador/registrar.php");
+    tipo retorno: void (pero escribe codigo: echo "......")
+    uso: hacer un formulario para registrar usuarios.
+    pd: revisar ejercicio profesor
+
+6. $d->listarUsuarios();
+    tipo retorno:void (pero tambien escribe codigo)
+    uso: listar los usuarios de la base de datos, permitiendo solo eliminar.
+    pd: revisar ejercicio profesor.
+
+7. $d->getPrivilegio($rut, $pass)
+    tipo retorno: int valor dependiendo si existe registro en bd con un rut y pass asociado
+    uso: confirmar acceso al sistema
+
+8. $d->getNombre($rut, $pass);
+    tipo retorno: string
+    uso: utilizar nombre asociado a un rut y pass

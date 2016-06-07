@@ -12,5 +12,26 @@
             <input type="submit" name="btnIniciar" value="Iniciar Sesion">
         </form>
 
+        <?php
+            if(isset($_GET["m"])){
+                $m=$_GET["m"];
+
+                switch ($m) {
+                    case 1:
+                        echo "Debe completar formulario!";
+                        break;
+
+                    case 2:
+                        echo "Inicie sesion para ingresar a cuenta";
+                        break;
+                    case 3:
+                        echo "Datos incorrectos. Pruebe nuevamente";
+                        break;
+                    case 4:
+                        echo "Inicie sesion para realizar movimientos"
+                        break;
+                }
+            }
+        ?>
     </body>
 </html>
